@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
+  <test thread-count="5" name="TestFirFox(failed)" parallel="tests">
+    <parameter name="Browser" value="Chrome"/>
+    <classes>
+      <class name="com.ttsl.crmapplogintestcase.LoginTestCase">
+        <methods>
+          <include name="setUp"/>
+          <include name="enterContactDetails"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.ttsl.crmapplogintestcase.LoginTestCase -->
+    </classes>
+  </test> <!-- TestFirFox(failed) -->
+  <test thread-count="5" name="TestChrome(failed)" parallel="tests">
+    <parameter name="Browser" value="ie"/>
+    <classes>
+      <class name="com.ttsl.crmapplogintestcase.LoginTestCase">
+        <methods>
+          <include name="setUp"/>
+          <include name="enterContactDetails" invocation-numbers="0 1"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.ttsl.crmapplogintestcase.LoginTestCase -->
+    </classes>
+  </test> <!-- TestChrome(failed) -->
+</suite> <!-- Failed suite [Suite] -->
